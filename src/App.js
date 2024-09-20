@@ -21,7 +21,7 @@ class App extends React.Component {
     currentStep: 0,
     timeouts: [],
     algorithm: 'Bubble Sort',
-    barCount: 10,
+    barCount: 15,
     delay: 500,
   }
 
@@ -157,7 +157,7 @@ class App extends React.Component {
   render() {
     let barsDiv = this.state.array.map((value, index) => <Bar
       key={index}
-      length={value}
+      length={value*2}
       colorKey={this.state.colorKey[index]}
     />);
     let playButton;
